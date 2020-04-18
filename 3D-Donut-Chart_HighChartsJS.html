@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+      <meta charset="utf-8" />
+      <meta http-equiv="content-type" content="text/html,  charset=UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes"/>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+      <script src="https://code.highcharts.com/highcharts.js"></script>
+      <script src="https://code.highcharts.com/highcharts-3d.js"></script>
+      <script src="https://code.highcharts.com/modules/exporting.js"></script>
+      <script src="https://code.highcharts.com/highcharts-more.js"></script>
+
+      <script>
+          $(function () {
+              $(document).ready(function () {
+  Highcharts.chart('container', {
+      chart: {
+          type: 'pie',
+          options3d: {
+              enabled: true,
+              alpha: 45
+          }
+      },
+      title: {
+          text: 'Wild Life of Haggerzh\'s Forest'
+      },
+      subtitle: {
+          text: '3D donut in Highcharts'
+      },
+      plotOptions: {
+          pie: {
+              innerSize: 100,
+              depth: 45
+          }
+      },
+      series: [{
+          name: 'Number of species',
+          data: [
+              ['Elephants', 8],
+              ['Leopards', 3],
+              ['Antelopes', 21],
+              ['Wild Dogs', 6],
+              ['Hyenas', 8],
+              ['Hypos', 4],
+              ['Cheatahs', 4],
+              ['Zebras', 13],
+              ['Lions', 10]
+          ]
+      }]
+  });
+
+              });
+          });
+      </script>
+      <title>A 3D Donut Chart - Using HighCharts JS</title>
+  </head>
+  <body>
+      <div id="container" style="min-width: 340px; height: 430px; max-width: 630px; margin: 0 auto"></div>
+      <p><em>A work in progress.</em></p>
+  </body>
+</html>
